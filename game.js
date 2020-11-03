@@ -75,7 +75,7 @@ function countdown() {
         timerEl.textContent = "";
         clearInterval(timeInterval);
         alert("Too slow! Click Play Again!");
-        return window.location.assign("end.html");
+        return window.location.assign("/quiz-app/end.html");
        }
   
     }, 1000);
@@ -84,7 +84,7 @@ function countdown() {
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
-    return window.location.assign("end.html");
+    return window.location.assign("/quiz-app/end.html");
   }
   questionCounter++;
   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
